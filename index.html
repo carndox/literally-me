@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Carndox</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .social-icons a {
+            color: #495057;
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .about-section, .contact-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            text-align: justify;
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #495057;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        #popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="haha OMT.jpg" alt="Your Image" class="profile-img img-fluid mt-3">
+            <h1 class="mt-4">Carndox</h1>
+            <p class="lead">Founder of Racism | Inventor of Cancer | Anti-LGTV Activist</p>
+        </div>
+        
+        <div class="about-section mt-5">
+            <h2>About Me</h2>
+            <p>Hello, chat. I'm Carndox, best known as the inventor of the dimension-dissolving substance, Carndoxycycline. I have a burning passion for discrimination. I am not just racially motivated, I will discriminate based on sexuality and religion too. Back in my day, the <b>blacks</b> were free not free. Gender does not exist, it is called sex. On that note, there are only two sexes, the one I had with your mother and the one I had with your father.</p>
+        </div>
+
+        <div class="contact-section mt-5">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me through the following platforms:</p>
+            <div class="social-icons">
+                <a href="https://github.com/carndox" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="javascript:void(0)" id="discord-link"><i class="fab fa-discord"></i></a>
+                <a href="https://reddit.com/user/Cubic_Gamer" target="_blank"><i class="fab fa-reddit"></i></a>
+            </div>
+            <input type="text" id="discord-username" value="carndox" style="position: absolute; left: -9999px;">
+        </div>
+    </div>
+
+    <div id="popup">Copied to clipboard</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('discord-link').addEventListener('click', function() {
+            var copyText = document.getElementById('discord-username');
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            document.execCommand('copy');
+
+            var popup = document.getElementById('popup');
+            popup.classList.add('show');
+            setTimeout(function() {
+                popup.classList.remove('show');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
